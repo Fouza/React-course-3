@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Input from './components/Input/Input';
 import BigComp from './components/BigComp/BigComp';
+import Form from './components/Form/Form';
 
 function App() {
 
@@ -17,7 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <BigComp title="Big Component" />
+      {/* <BigComp title="Big Component" /> */}
+      {/* Ctrl + space */}
+      <Form />
     </div>
   );
 }

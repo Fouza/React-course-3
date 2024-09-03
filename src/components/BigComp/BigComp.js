@@ -37,7 +37,7 @@ class BigComp extends React.Component {
             return false
         }
     }
-    handleInputChange(event) {
+    handleInputChange(event, counter) {
         const value = event.target.value
         this.setState({ counter: value })
         this.testMethod()
@@ -54,6 +54,8 @@ class BigComp extends React.Component {
             <div>
                 <h1>{title}</h1>
                 <input type="number" value={counter} onChange={this.handleInputChange} />
+                {/* <input type="number" value={counter} onChange={(event) => this.handleInputChange(event, counter)} /> */}
+
                 <h2>New update : {counter}</h2>
             </div>
         )
