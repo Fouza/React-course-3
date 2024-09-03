@@ -12,7 +12,8 @@ const Form = () => {
     const handlechange = (name, event) => {
         const value = event.target.value
         const prevData = { ...data }
-        const obj = Object.assign(prevData, { [name]: value })
+        //prevData = {firstName: '', age: null, email: ''}
+        const obj = Object.assign(prevData, { [name]: value }) // {firstName: "Fouzi"}
         setData(obj)
     }
 
