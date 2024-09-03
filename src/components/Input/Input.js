@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import Button from './Button'
-import TextComp from './TextComp'
+import Button from '../Button/Button'
+import TextComp from '../TextComp/TextComp'
+import './Input.css'
 
 const Input = ({ initialValue, firstName }) => {
 
     const [counter, setCounter] = useState(initialValue)
-    const [list_items, setListItems] = useState([])
-    const [exist, setExist] = useState(false)
+    const [list_items, setListItems] = useState(['test'])
+    const [exist, setExist] = useState(true)
 
     // Hooks
     //Mounted
@@ -25,18 +26,19 @@ const Input = ({ initialValue, firstName }) => {
     }, [counter, list_items, exist])
 
     //Unmounted
-    useEffect(() => {
+    // useEffect(() => {
 
-        //cleanup
-        return () => {
-            console.log("Unmounted")
-        }
-    }, [])
+    //     //cleanup
+    //     return () => {
+    //         console.log("Unmounted")
+    //         alert("Are you sure you want to leave ?");
+    //     }
+    // }, [])
 
 
-    useEffect(() => {
-        //This useeffect triggers at any subsequent change
-    })
+    // useEffect(() => {
+    //     //This useeffect triggers at any subsequent change
+    // })
 
     const handleChange = () => {
         //Bunch of actions
@@ -45,8 +47,9 @@ const Input = ({ initialValue, firstName }) => {
 
     //return statement
     return (
-        <div className='input'>
-            <TextComp text={"Counter feature 1"} />
+        <div className='input input_class'>
+            <TextComp title={"Counter feature 1"} className="black" />
+            <TextComp title={"Testing CSS"} className="pink" />
             <h1>{firstName}</h1>
             <input type='text' value={initialValue} onChange={handleChange} />
             <Button counter={counter} setCounter={setCounter} />

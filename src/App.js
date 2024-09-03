@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Input from './components/Input';
+import Input from './components/Input/Input';
+import BigComp from './components/BigComp/BigComp';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Input initialValue={x} firstName={firstName} />
+      <BigComp title="Big Component" />
     </div>
   );
 }
