@@ -8,6 +8,10 @@ const Form = () => {
         email: ''
     })
 
+    const [firstName, setFirstName] = useState()
+    const [age, setAge] = useState()
+    const [email, setEmail] = useState()
+
     // A function that changes a state when an input is changed
     const handlechange = (name, event) => {
         const value = event.target.value
@@ -15,6 +19,17 @@ const Form = () => {
         //prevData = {firstName: '', age: null, email: ''}
         const obj = Object.assign(prevData, { [name]: value }) // {firstName: "Fouzi"}
         setData(obj)
+    }
+
+    const handleChangeV2 = (name, event) => {
+        switch (name) {
+            case 'firstName':
+                setFirstName(event.target.value)
+            case 'age':
+                setAge(event.target.value)
+            case 'email':
+                setEmail(event.target.value)
+        }
     }
 
     console.log(Object.keys(data))
