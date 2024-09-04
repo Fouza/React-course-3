@@ -6,11 +6,11 @@ import DataComp from './components/DataComp/DataComp';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
-import Layout from './Layout/Layout';
 import LayoutAdmin from './Admin/LayoutAdmin';
 import ProductsPage from './Admin/ProductsPage';
 import Employees from './Admin/Employees';
 import './scss/shared.scss'
+import Layout from './Layout/Layout';
 //sass is a css pre-processor
 
 function App() {
