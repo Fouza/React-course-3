@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import Input from './components/Input/Input';
 import BigComp from './components/BigComp/BigComp';
 import Form, { TestComp } from './components/Form/Form';
@@ -11,6 +10,8 @@ import Layout from './Layout/Layout';
 import LayoutAdmin from './Admin/LayoutAdmin';
 import ProductsPage from './Admin/ProductsPage';
 import Employees from './Admin/Employees';
+import './scss/shared.scss'
+//sass is a css pre-processor
 
 function App() {
 

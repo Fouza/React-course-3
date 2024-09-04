@@ -6,16 +6,16 @@ const Layout = ({ }) => {
 
     return (
         <div>
-            <nav class="navbar">
-                <span class="company_name">CONQUEROR OF THE SUN</span>
-                <ul class="links">
+            <nav className="navbar">
+                <span className="company_name">CONQUEROR OF THE SUN</span>
+                <ul className="links">
                     <Link to="/" className='link'>Home</Link>
                     <Link to="/contact" className='link'>Contact</Link>
                 </ul>
-                <div class="sign_container">
-                    <button class="sign">Sign Up</button>
+                <div className="sign_container">
+                    <button className="sign">Sign Up</button>
                 </div>
-                <div class="side_menu_btn"><i class="fas fa-bars"></i></div>
+                <div className="side_menu_btn"><i className="fas fa-bars"></i></div>
             </nav>
 
             <main>

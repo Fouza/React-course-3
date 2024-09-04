@@ -1,0 +1,34 @@
+@import "../vars/_variables.scss";
+
+$colors: (
+    dark-indigo: $dark-indigo,
+    darkest-teal: $darkest-teal,
+    dark-teal: $dark-teal,
+    darkest-grey: $darkest-grey,
+    dark-grey: $dark-grey,
+    mid-grey: $mid-grey,
+    light-grey: $light-grey,
+    lightest-grey: $link-grey,
+    bg-grey: $bg-grey,
+    white: $white,
+);
+
+// .fg-dark-indigo{
+//     color: $dark-indigo
+// }
+
+// .fg-darkest-teal{
+//     color: $darkest-teal
+// }
+
+//...
+
+@each $class, $color in $colors {
+    .fg-#{$class} {
+        color: $color !important;
+    }
+
+    .bg-#{$class} {
+        background-color: $color !important;
+    }
+}
