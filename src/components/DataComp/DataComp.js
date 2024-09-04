@@ -10,9 +10,27 @@ const DataComp = () => {
 
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts/1')
-            .then(response => setData(response.data))
+            .then(response =>
+                setTimeout(() => {
+                    setData(response.data)
+                }, 5000)
+            )
             .catch(error => console.error('Error:', error));
     }, []);
+
+    console.log(data)
+    //API is a set of endpoints
+    //Each endpoint does a specific action (Inserting, creating, fetching)
+    // Eg: Endpoint for fetching list of users
+    // Eg: Endpoint for creating a new Order
+
+
+    //Each endpoint is defined by the URL and the method
+    //post
+    //put
+    //delete
+
+
 
     useEffect(() => {
         axios.post('https://jsonplaceholder.typicode.com/posts', {
@@ -45,15 +63,11 @@ const DataComp = () => {
     }, []);
 
 
-    console.log(response)
     return (
-        <div>
-            {data ? <Fragment>
-                {Object.keys(data).map((key, index) => (
-                    <p key={index}>{data[key]}</p>
-                ))}
-            </Fragment> : 'Loading...'}
-        </div>
+        <Fragment>
+            <p></p>
+            <div></div>
+        </Fragment>
     )
 }
 

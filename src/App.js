@@ -28,8 +28,6 @@ function App() {
           <Route index element={<ProductsPage />} />
           <Route path="employees" element={<Employees />} />
         </Route>
-
-
       </Routes>
     </BrowserRouter>
   );
