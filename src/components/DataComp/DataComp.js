@@ -8,8 +8,17 @@ const DataComp = () => {
     const [dataPut, setDataPut] = useState()
 
 
+    // useEffect(() => {
+    //     axios.get('https://jsonplaceholder.typicode.com/posts/1')
+    //         .then(response =>
+    //             setTimeout(() => {
+    //                 setData(response.data)
+    //             }, 5000)
+    //         )
+    //         .catch(error => console.error('Error:', error));
+    // }, []);
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        axios.get('https://ipinfo.io')
             .then(response =>
                 setTimeout(() => {
                     setData(response.data)
