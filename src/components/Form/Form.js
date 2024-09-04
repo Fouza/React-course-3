@@ -1,4 +1,9 @@
 import React, { useState } from 'react'
+import TextComp from '../TextComp/TextComp'
+
+export const TestComp = () => {
+    return (<h6>Test</h6>)
+}
 
 const Form = () => {
     // States
@@ -43,18 +48,24 @@ const Form = () => {
             {/* An input to fill the email */}
             <input type='email' name='email' placeholder='Email' onChange={(event) => handlechange("email", event)} />
 
+            <TestComp />
             {/* 
             I want you to display the real time values of the states in
             an unordered list here
              */}
             <ul>
                 {/* ["firstName", "age", "email"] */}
-                {Object.keys(data).map(key => (
-                    <li>{data[key]}</li>
+                {Object.keys(data).map((key, index) => (
+                    <TextComp key={`list1_ ${index}`} title={data[key]} />
                 ))}
-                <li>{data.firstName}</li>
-                <li>{data.age}</li>
-                <li>{data.email}</li>
+
+            </ul>
+
+            <ul>
+                {/* ["firstName", "age", "email"] */}
+                {Object.keys(data).map((key, index) => (
+                    <TextComp key={`list2_${index}`} title={data[key]} />
+                ))}
 
             </ul>
         </form>
